@@ -1,0 +1,390 @@
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+
+/* Modern CSS reset
+--------------------------------------------- */
+// /* Box sizing rules */
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+// /* Remove default margin */
+// html,
+// body,
+// p,
+// ol,
+// ul,
+// li,
+// dl,
+// dt,
+// dd,
+// blockquote,
+// figure,
+// fieldset,
+// legend,
+// textarea,
+// pre,
+// iframe,
+// hr,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// body,
+// h1,
+// h2,
+// h3,
+// h4,
+// p,
+// figure,
+// blockquote,
+// dl,
+// dd {
+//   margin: 0;
+// }
+
+// /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+// ul[role='list'],
+// ol[role='list'] {
+//   list-style: none;
+// }
+
+// /* Set core root defaults */
+// html,
+// html:focus-within {
+//   scroll-behavior: smooth;
+// }
+
+// /* Set core body defaults */
+// body {
+//   min-height: 100vh;
+//   text-rendering: optimizeSpeed;
+//   line-height: 1.5;
+// }
+
+// /* A elements that don't have a class get default styles */
+// a:not([class]) {
+//   text-decoration-skip-ink: auto;
+// }
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// /* Inherit fonts for inputs and buttons */
+// input,
+// button,
+// textarea,
+// select {
+//   font: inherit;
+// }
+
+// /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+// @media (prefers-reduced-motion: reduce) {
+//   html:focus-within {
+//    scroll-behavior: auto;
+//   }
+  
+//   *,
+//   *::before,
+//   *::after {
+//     animation-duration: 0.01ms !important;
+//     animation-iteration-count: 1 !important;
+//     transition-duration: 0.01ms !important;
+//     scroll-behavior: auto !important;
+//   }
+// }
+
+:root {
+  --font-main: 'sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --color__text-main: #000;
+  --color__background-body: #fff;
+  --color__brand: #ea877d;
+}
+
+.color-brand {
+  color: var(--color__brand);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+/* Typography
+--------------------------------------------- */
+body {
+  font-family: var(--font-main);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+  color: var(--color__text-main);
+  background-color: var(--color__background-body); // Fallback for when there is no custom background color defined.
+  overflow-x: hidden;
+}
+// body,
+// button,
+// input,
+// select,
+// optgroup,
+// textarea {
+// 	color: $color__text-main;
+// 	font-family: $font__main;
+// 	font-size: 1rem;
+// 	line-height: $font__line-height-body;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   clear: both;
+// }
+
+// p {
+// 	margin-bottom: 1.5em;
+// }
+
+// dfn,
+// cite,
+// em,
+// i {
+// 	font-style: italic;
+// }
+
+// blockquote {
+// 	margin: 0 1.5em;
+// }
+
+// address {
+// 	margin: 0 0 1.5em;
+// }
+
+// pre {
+// 	background: $color__background-pre;
+// 	font-family: $font__pre;
+// 	line-height: $font__line-height-pre;
+// 	margin-bottom: 1.6em;
+// 	max-width: 100%;
+// 	overflow: auto;
+// 	padding: 1.6em;
+// }
+
+// code,
+// kbd,
+// tt,
+// var {
+// 	font-family: $font__code;
+// }
+
+// abbr,
+// acronym {
+// 	border-bottom: 1px dotted $color__border-abbr;
+// 	cursor: help;
+// }
+
+// mark,
+// ins {
+// 	background: $color__background-ins;
+// 	text-decoration: none;
+// }
+
+// big {
+// 	font-size: 125%;
+// }
+
+// /* Elements
+// --------------------------------------------- */
+// hr {
+// 	background-color: $color__background-hr;
+// 	border: 0;
+// 	height: 1px;
+// 	margin-bottom: 1.5em;
+// }
+
+// ul,
+// ol {
+// 	margin: 0 0 1.5em 3em;
+// }
+
+// ul {
+// 	list-style: disc;
+// }
+
+// ol {
+// 	list-style: decimal;
+// }
+
+// li > ul,
+// li > ol {
+// 	margin-bottom: 0;
+// 	margin-left: 1.5em;
+// }
+
+// dt {
+// 	font-weight: 700;
+// }
+
+// dd {
+// 	margin: 0 1.5em 1.5em;
+// }
+
+// /* Make sure embeds and iframes fit their containers. */
+// embed,
+// iframe,
+// object {
+// 	max-width: 100%;
+// }
+
+// img {
+// 	height: auto; // Make sure images are scaled correctly.
+// 	max-width: 100%; // Adhere to container width.
+// }
+
+// figure {
+// 	margin: 1em 0; // Extra wide images within figure tags don't overflow the content area.
+// }
+
+// table {
+// 	margin: 0 0 1.5em;
+// 	width: 100%;
+// }
+
+// /* Links
+// --------------------------------------------- */
+// a {
+// 	color: $color__link;
+
+// 	&:visited {
+// 		color: $color__link-visited;
+// 	}
+
+// 	&:hover,
+// 	&:focus,
+// 	&:active {
+// 		color: $color__link-hover;
+// 	}
+
+// 	&:focus {
+// 		outline: thin dotted;
+// 	}
+
+// 	&:hover,
+// 	&:active {
+// 		outline: 0;
+// 	}
+// }
+
+/* Forms
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 3px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: $color__text-input;
+	border: 1px solid $color__border-input;
+	border-radius: 3px;
+	padding: 3px;
+
+	&:focus {
+		color: $color__text-input-focus;
+	}
+}
+
+select {
+	border: 1px solid $color__border-input;
+}
+
+textarea {
+	width: 100%;
+}
+
+// Blog
+/*--------------------------------------------------------------
+# Post: Single
+--------------------------------------------------------------*/
+/* Post Header
+--------------------------------------------- */
+/* POST HEADER */
+
+/* POST CONTENT */
+.single .entry-content > *:first-child {
+  margin-top: 2.5rem;
+  font-size: 1.25rem;
+}
+/* POST FOOTER */
+
+
+.articles-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) 300px;
+  gap: 2.5rem;
+  margin: 0 auto;
+
+  @media (max-width: 991.98px) {
+    display: block;
+
+    .widget-area {
+      display: none;
+    }
+  }
+}
+
