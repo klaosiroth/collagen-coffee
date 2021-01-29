@@ -11137,7 +11137,7 @@ picture {
 }
 
 :root {
-  --font-main: 'sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-main: 'NotoSansThai', Noto Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --color__text-main: #000;
   --color__background-body: #fff;
   --color__brand: #ea877d;
@@ -11145,6 +11145,20 @@ picture {
 
 .color-brand {
   color: var(--color__brand);
+}
+
+@font-face {
+  font-family: 'NotoSansThai';
+  src: url("../../assets/fonts/NotoSansThai/NotoSansThai-Regular.ttf");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NotoSansThai';
+  src: url("../../assets/fonts/NotoSansThai/NotoSansThai-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
 }
 
 *,
@@ -11173,6 +11187,84 @@ body {
   color: var(--color__text-main);
   background-color: var(--color__background-body);
   overflow-x: hidden;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+}
+
+@media (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+@media (min-width: 1200px) {
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+  max-width: 100%;
 }
 
 /* Forms
@@ -11285,5 +11377,21 @@ textarea {
   .articles-sidebar .widget-area {
     display: none;
   }
+}
+
+/*--------------------------------------------------------------
+# Page: Contact
+--------------------------------------------------------------*/
+.contact__map {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+}
+
+.contact__map iframe {
+  width: inherit;
+  height: inherit;
+  border: 0;
+  pointer-events: none;
 }
 /*# sourceMappingURL=main.css.map */
