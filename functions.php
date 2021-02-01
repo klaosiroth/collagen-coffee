@@ -143,7 +143,6 @@ function collagen_coffee_scripts() {
 	wp_enqueue_style( 'collagen-coffee-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'collagen-coffee-style', 'rtl', 'replace' );
 
-	wp_enqueue_style( 'collagen-coffee-main', get_template_directory_uri() . '/assets/css/main.css', array(), false, 'all' );
 	wp_enqueue_script( 'collagen-coffee-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -180,10 +179,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 /**
- * Custom Functions by Natthaphon
+ * Load custom functions.
  */
-function set_exception_length() {
-	return 25;
-}
-
-add_filter( 'excerpt_length', 'set_exception_length' );
+require get_template_directory() . '/custom-functions.php';

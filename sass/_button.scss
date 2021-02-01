@@ -1,0 +1,85 @@
+/* Button
+--------------------------------------------- */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: $color__border-button;
+	border-radius: 4px;
+	background: $color__background-button;
+	color: rgba(0, 0, 0, 0.8);
+	line-height: 1;
+	padding: 0.6em 1em 0.4em;
+
+	&:hover {
+		border-color: $color__border-button-hover;
+	}
+
+	&:active,
+	&:focus {
+		border-color: $color__border-button-focus;
+	}
+}
+
+// .button {
+//   display: inline-block;
+//   padding: 1rem 1.5rem;
+//   border: 1px solid transparent;
+//   border-radius: 2rem;
+//   background-color: inherit;
+//   color: inherit;
+//   font-size: 0.875rem;
+//   font-weight: var(--font-weight-bold);
+//   line-height: 1;
+//   letter-spacing: -.01em;
+//   text-align: center;
+//   vertical-align: middle;
+//   user-select: none;
+//   touch-action: manipulation;
+
+//   &:focus {
+//     outline: none;
+//   }
+
+//   &:active {
+//     transform: scale(0.98);
+//   }
+// }
+
+%button {
+  position: relative;
+  padding: .125rem 2.5rem 0;
+  border: .0625rem solid transparent;
+  margin-bottom: .0625rem;
+  border-radius: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 2.5rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -.02em;
+  white-space: nowrap;
+  text-decoration: none;
+  display: inline-flex;
+  overflow: hidden;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.button {
+  @extend %button;
+  color: var(--color__button);
+  background-color: var(--color__button-background);
+  border-color: var(--color__button-border);
+
+  &:hover {
+    color: var(--color__button--hover);
+    background-color: var(--color__button-background--hover);
+    border-color: var(--color__button-border--hover);
+  }
+}

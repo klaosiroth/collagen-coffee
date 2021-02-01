@@ -1,3 +1,41 @@
+.site-header {
+	display: flex;
+	align-items: center;
+
+	.site-branding {
+		padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+		white-space: nowrap;
+		
+		.site-title {
+			margin: 0;
+		}
+
+		.site-description {
+			display: none;
+		}
+	}
+
+	.main-navigation {
+		margin-left: auto;
+
+		a {
+			font-size: .875rem;
+			color: #18113c;
+			font-weight: 500;
+			padding: .3125rem .5rem;
+
+			&:hover {
+				color: var(--color__brand);
+			}
+		}
+	}
+}
+
+
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
