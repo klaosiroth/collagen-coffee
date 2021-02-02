@@ -50,8 +50,8 @@ get_header();
               </a>
               <!-- Card body -->
               <div class="card-body">
-                <a href="#!" class="font-size-sm font-weight-semi-bold d-block mb-3 text-info">Courses</a>
-                <h3><a href="blog-single.html" class="text-inherit">
+                <a href="#" class="font-size-sm font-weight-semi-bold d-block mb-3 text-info">Courses</a>
+                <h3><a href="<?php echo get_stylesheet_directory_uri(); ?>/form.html" class="text-inherit">
                     How to become modern Stack Developer in 2020
                   </a>
                 </h3>
@@ -106,7 +106,7 @@ get_header();
           <h2 class="mb-0">บทความ</h2>
         </div>
         <div class="col-auto">
-          <a href="/shop" class="btn btn-outline-primary btn-sm">อ่านทั้งหมด</a>
+          <a href="/blog" class="btn btn-outline-primary btn-sm">อ่านทั้งหมด</a>
         </div>
       </div>
       <div class="row row-cols-3">
